@@ -1,6 +1,6 @@
-H_DIR=headers
-S_DIR=sources
-BIN_DIR=bin
+H_DIR=./headers
+S_DIR=./sources
+BIN_DIR=./bin
 
 .PHONY: all clean
 

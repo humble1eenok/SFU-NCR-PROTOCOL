@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <malloc.h>
+#include <string.h>
+
 #include "headers/utils.h"
 #include "headers/ncr_structs.h"
 
@@ -7,9 +10,20 @@
     The code here is just a dummy training
 */
 
+typedef struct some
+{
+    unsigned size;
+    char data[1];
+} alpha;
+
 int main(void)
 {
     // printf("I am working!\n");
+    alpha * Some = (alpha*)malloc(sizeof(alpha) * 4);
+    (Some + 2)->size = 2;
+    memcpy((Some + 2)->data, "4", 1);
+
+    printf("%c\n", *((Some + 2)->data));
 
     NCR b;
     b.ncr_base = 1;
